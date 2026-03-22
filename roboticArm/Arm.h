@@ -11,9 +11,9 @@ private:
   const unsigned short int SHOULDER_MOTOR_PIN = 10;
   const unsigned short int BASE_MOTOR_PIN = 11;
 
-   //const unsigned int PINCER_INPUT = A4;
-  //const unsigned int WRIST_INPUT = A3;
-  //const unsigned int ELBOW_INPUT = A2;
+  //const unsigned int PINCER_INPUT = A4;
+  const unsigned int WRIST_INPUT = A3;
+  const int ELBOW_INPUT = A2;
   const int SHOULDER_INPUT = A1;
   const int BASE_INPUT = A0;
 
@@ -27,13 +27,13 @@ private:
     PINCER
   };
 
-  //Servo pincerServo;
-  /*Servo wristServo;
-  Servo elbowServo;*/
+  /*Servo pincerServo;*/
+  Servo wristServo;
+  Servo elbowServo;
   Servo shoulderServo;
   Servo baseServo;
 
-  ServoMtr motors[2] = {ServoMtr(BASE_INPUT, BASE_MOTOR_PIN, &baseServo), ServoMtr(SHOULDER_INPUT, SHOULDER_MOTOR_PIN, &shoulderServo)};
+  ServoMtr motors[4] = {ServoMtr(BASE_INPUT, BASE_MOTOR_PIN, &baseServo), ServoMtr(SHOULDER_INPUT, SHOULDER_MOTOR_PIN, &shoulderServo), ServoMtr(ELBOW_INPUT, ELBOW_MOTOR_PIN, &elbowServo), ServoMtr(WRIST_INPUT, WRIST_MOTOR_PIN, &wristServo)};
   void stickRead(ServoMtr* motor, int analogStickValue, int midPoint);
 
 public:

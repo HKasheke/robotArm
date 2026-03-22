@@ -6,17 +6,16 @@ class ServoMtr {
 private:
   const short int DEFAULT_ANGLE = 90;
 
-  short int MIN_ANGLE = 0;
-  short int MAX_ANGLE = 180;
+  const short int MIN_ANGLE = 0;
+  const short int MAX_ANGLE = 180;
   short int angle = DEFAULT_ANGLE;
   int inputPinNum;
   int outputPinNum;
 
-  //Servo pincerServo;
   Servo* servoObj;
 
 public:
-  ServoMtr(const int inputPin, const int outputPin, Servo* servo);
+  ServoMtr(const unsigned short int inputPin, const unsigned short int outputPin, Servo* servo);
   void incAngle(int delta);
   void decAngle(int delta);
   void setAngle(const int angle);

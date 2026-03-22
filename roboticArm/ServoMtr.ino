@@ -1,6 +1,6 @@
 #include "ServoMtr.h"
 
-ServoMtr::ServoMtr(const int inputPin, const int outputPin, Servo* servo)
+ServoMtr::ServoMtr(const unsigned short int inputPin, const unsigned short int outputPin, Servo* servo)
   : inputPinNum(inputPin),
     outputPinNum(outputPin),
     servoObj(servo) {
