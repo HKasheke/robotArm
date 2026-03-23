@@ -53,7 +53,7 @@ void Arm::begin() {
     Serial.print("Angle: ");
     Serial.println(baseMotor.getAngle());*/
 
-    delay(10);
+    delay(3o0);
   }
 }
 

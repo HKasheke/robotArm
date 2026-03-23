@@ -17,8 +17,6 @@ private:
   const int SHOULDER_INPUT = A1;
   const int BASE_INPUT = A0;
 
-  const unsigned short int DEFAULT_ANGLE = 90;
-
   enum MotorIndecies{
     BASE,
     SHOULDER,
